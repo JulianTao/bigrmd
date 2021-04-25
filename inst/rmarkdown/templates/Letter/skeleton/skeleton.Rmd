@@ -5,7 +5,7 @@ fromtitle: Associate Professor
 fromWWW: sites.google.com/asu.edu/big
 fromemail: julian.tao@asu.edu
 fromphone: (216) 785 1376
-fromsignature: Signature.png
+fromsignature: Signature
 logo: asulogo
 toname: <++>
 toaddress: <++>
