@@ -1,0 +1,33 @@
+---
+title: <++>
+author:
+- name: <++>, S.M. ASCE
+  affiliation: Graduate Research Associate, Center for Bio-mediated and Bio-inspired Geotechnics, Arizona State University, 650 E Tyler Mall, Tempe, AZ 85281
+  email: <++>@asu.edu
+  number: 1
+- name: Junliang Tao, PhD. A.M. ASCE
+  affiliation: Associate Professor, Center for Bio-mediated and Bio-inspired Geotechnics, Arizona State University, 650 E Tyler Mall, Tempe, AZ 85281
+  email: julian.tao@asu.edu
+  number: 2
+abstract: <++>
+pubtype: Journal
+# bibliography: <++>.bib
+output:
+  bigrmd::asce:
+    keep_tex:true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+# Methods and Materials
+
+# Results
+
+# Discussions
+
+# Conclusions
+

@@ -1,0 +1,20 @@
+---
+from: Julian Tao
+fromqualifications: PhD
+fromtitle: Associate Professor
+fromWWW: sites.google.com/asu.edu/big
+fromemail: julian.tao@asu.edu
+fromphone: (216) 785 1376
+fromsignature: Signature.png
+logo: asulogo
+toname: <++>
+toaddress: <++>
+opening: Dear <++>
+closing: Best wishes
+spacing: 1.4
+output:
+  bigrmd::letter:
+    keep_tex: yes
+---
+
+<++>

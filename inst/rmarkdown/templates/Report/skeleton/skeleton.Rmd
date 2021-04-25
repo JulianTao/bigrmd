@@ -1,0 +1,45 @@
+---
+title: "<++>"
+titlepage: false
+weeklyreport: true
+weeknum: "`r format(Sys.time(), '%W')`"
+logo: BiGlogo
+author:
+- familyname: <++>
+  firstname: <++>
+  qualifications: Graduate Student
+
+bibliography: references.bib
+biblio-style: authoryear-comp
+linestretch: 1.5
+output:
+  bigrmd::report:
+    fig_caption: yes
+    fig_height: 5
+    fig_width: 8
+    includes:
+      in_header: preamble.tex
+    keep_tex: yes
+    number_sections: no
+    citation_package: biblatex
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE, messages=FALSE, warning=FALSE)
+# Make sure you have the latest versions of rmarkdown and bookdown installed
+library(ggplot2)
+```
+*Brief Summary: <++>*
+
+# Progress in this week
+<++>
+
+# Plan for the next week
+<++>
+
+# Upadte your semester plan
+*You can include your semester plan here and keep updating it every week*
+<++>
+
+

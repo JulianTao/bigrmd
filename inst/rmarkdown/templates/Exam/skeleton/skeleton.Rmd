@@ -1,0 +1,44 @@
+---
+title: "<++>"
+hw: false
+hwnum: 3
+duration: <++> hours writing time
+semester: <++>
+examperiod: <++>
+openbook: <++>
+takehome: <++>
+calculators: true
+output:
+  bigrmd::exam:
+    fig_caption: true
+    fig_height: 3.7
+    fig_width: 6
+    highlight: tango
+    keep_tex: yes
+    includes:
+      in_header: preamble.tex
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE)
+```
+
+**The exam contains <++> questions. ALL questions must be answered. The exam is worth 100 points in total.**
+
+\vspace*{2cm}
+
+
+#
+<++>
+
+\points{20}
+
+#
+<++>
+
+(a) <++>  \points{4}
+
+(b) More stuff. \points{10}
+
+(c) Final part. \points{6}

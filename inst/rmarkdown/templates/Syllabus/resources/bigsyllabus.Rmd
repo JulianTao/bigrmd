@@ -1,0 +1,110 @@
+---
+title: "<++> Syllabus"
+author: Julian Tao
+date: "Fall 2021"
+
+email: "julian.tao@asu.edu"
+web: "sites.google.com/asu.edu/big"
+officehours: "W <++>"
+office: "126 Goldwater Center"
+classroom: "<++>"
+classhours: "TR <++>"
+# bibliography: teaching.bib
+output:
+    bigrmd::syllabus:
+      keep_tex: true
+      fig_caption: yes
+      latex_engine: pdflatex
+---
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(cache.path='_cache/')
+knitr::opts_chunk$set(warning=F, message=F)
+# knitr::opts_knit$get(kable.force.latex = TRUE)
+```
+
+```{r dates, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+mon <- as.Date("2021-08-19")
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+```
+
+# Course Description
+
+
+# Course Objectives
+
+## Expected Learning Outcomes
+
+# Textbook and References
+
+
+# Grade Policies
+
+# Absence Make-up Polices
+## General policy
+
+## Excused absences
+1. Excused absences related to religious observances/practices that are in accord with [ACD 304-04](https://www.asu.edu/aad/manuals/acd/acd304-04.html)
+2. Excused absences related to university sanctioned events/activities that are in accord with [ACD 304-02](https://www.asu.edu/aad/manuals/acd/acd304-02.html)
+
+## Make-up policy
+There will be no make-up tests.
+
+# Homework, Exams and Quizes
+
+# Classroom Behavior
+
+# Academic Integrity
+
+Students in this class must adhere to ASU’s academic integrity policy, which can be found [here](https://provost.asu.edu/academic-integrity/policy). Students are responsible for reviewing this policy and understanding each of the areas in which academic dishonesty can occur. In addition, all engineering students are expected to adhere to both the ASU Academic Integrity [Honor Code](https://provost.asu.edu/academic-integrity/honor-code) and the Fulton Schools of Engineering [Honor Code](https://engineering.asu.edu/ira-a-fulton-schools-of-engineering-honor-code/). All academic integrity violations will be reported to the Fulton Schools of Engineering Academic Integrity Office (AIO).  The AIO maintains record of all violations and has access to academic integrity violations committed in all other ASU college/schools.
+
+# Copyright
+Course content, including lectures, are copyrighted materials and students may not share outside the class, upload to online websites not approved by the instructor, sell, or distribute course content or notes taken during the conduct of the course (see [ACD 304–06](https://www.asu.edu/aad/manuals/acd/acd304-06.html), “Commercial Note Taking Services” and ABOR Policy [5-308 F.14](https://public.azregents.edu/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf) for more information).You must refrain from uploading to any course shell, discussion board, or website used by the course instructor or other course forum, material that is not the student's original work, unless the students first comply with all applicable  copyright  laws;  faculty  members  reserve  the  right  to  delete  materials  on  the  grounds  of  suspected copyright infringement.
+
+You must refrain from uploading to any course shell, discussion board, or website used by the course instructor or other course forum, material that is not the student's original work, unless the students first comply with all applicable  copyright  laws;  faculty  members  reserve  the  right  to  delete  materials  on  the  grounds  of  suspected copyright infringement.
+
+# Policy against threatening behavior
+Per the Student Services Manual, SSM 104-02, students, faculty, staff, and other individuals do not have an unqualified right of access to university grounds, property, or services. Interfering with the peaceful conduct of university-related business or activities or remaining on campus grounds after a request to leave may be considered a crime. All incidents and allegations of violent or threatening conduct by an ASU student (whether on- or off-campus) must be reported to the ASU Police Department (ASU PD) and the Office of the Dean of Students.
+
+# Disability Accommodations
+Suitable accommodations will be made for students having disabilities. Students needing accommodations must register with the ASU disabilities resource Center and provide documentation of that registration to the instructor. Students should communicate the need for an accommodation in sufficient time for it to be properly arranged.
+
+# Harassment and Sexual Discrimination
+
+Arizona State University is committed to providing an environment free of discrimination, harassment, or retaliation for the entire university community, including all students, faculty members, staff employees, and guests. ASU expressly prohibits discrimination, harassment, and retaliation by employees, students, contractors, or agents of the university based on any protected status: race, color, religion, sex, national origin, age, disability, veteran status, sexual orientation, gender identity, and genetic information.Title  IX  is  a  federal  law  that  provides  that  no  person  be  excluded  on  the  basis  of  sex  from  participation  in,  be denied benefits of, or be subjected to discrimination under any education program or activity.  Both Title IX and university policy make clear that sexual violence and harassment based on sex is prohibited.  An individual who believes they have been subjected to sexual violence or harassed on the basis of sex can seek support, including counseling and academic support, from the university.  If you or someone you know has been harassed on the basis of sex or sexually assaulted, you can find [information and resources here](https://sexualviolenceprevention.asu.edu/faqs).
+
+## Mandated sexual harassment reporter
+As an employee of the University I am considered a mandated reporter and therefore obligated to report any information regarding alleged acts of sexual discrimination that I am informed of or have a reasonable basis to believe occurred.
+
+[ASU Counseling Services](https://eoss.asu.edu/counseling), is available if you wish to discuss any concerns confidentially and privately.
+
+# Tentative Schedule
+Students must read the following before Tuesday's class session.  Important: class readings are subject to change, contingent on mitigating circumstances and the progress we make as a class.  Students are encouraged to attend lectures and check the course Canvas website for updates.
+
+##  `r advdate(mon, 1)`: Syllabus Day
+##  `r advdate(mon, 2)`:
+##  `r advdate(mon, 3)`:
+##  `r advdate(mon, 4)`:
+##  `r advdate(mon, 5)`:
+##  `r advdate(mon, 6)`:
+##  `r advdate(mon, 7)`:
+##  `r advdate(mon, 8)`:
+##  `r advdate(mon, 9)`:
+##  `r advdate(mon, 10)`:
+##  `r advdate(mon, 11)`:
+##  `r advdate(mon, 12)`:
+##  `r advdate(mon, 13)`:
+##  `r advdate(mon, 14)`:
+##  `r advdate(mon, 15)`:
+##  `r advdate(mon, 16)`:
+##  `r advdate(mon, 17)`:
