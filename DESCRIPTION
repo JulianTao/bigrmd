@@ -1,6 +1,6 @@
 Package: bigrmd
 Type: Package
-Title: Aims to Promote Reproducible Writing with Consistent Styles in the Research Group
+Title: Promote Reproducible Writing with Consistent Styles in the Research Group
 Version: 0.1.0
 Authors@R: person("Julian", "Tao", , "julian.tao@asu.edu", c("aut", "cre"))
 Maintainer: <julian.tao@asu.edu>
