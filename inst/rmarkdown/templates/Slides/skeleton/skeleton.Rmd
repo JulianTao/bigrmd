@@ -7,8 +7,8 @@ institute: Arizona State University
 classoption: aspectratio=1610
 themeoptions: numbering=fraction, progressbar=frametitle
 # mainfont: Arial
-titlegraphic: beamerlogo
-endlogo: Acknowledge-logo
+titlegraphic: titlelogo
+endlogo: endlogo
 output: 
   bigrmd::slides:
     includes:
