@@ -12,7 +12,7 @@ $endif$
 \newcommand{\blankline}{\quad\pagebreak[2]}
 
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} 
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs}
 
 \usepackage{parskip}
@@ -29,7 +29,7 @@ $endif$
 \titlespacing{\subsubsection}{0pt}{.5ex}{0ex}
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{6pt plus 2pt minus 1pt}
-%\setlength{\emergencystretch}{3em}  % prevent overfull lines 
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines
 
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -38,7 +38,7 @@ $endif$
 \pagestyle{fancy}
 \usepackage{lastpage}
 \renewcommand{\headrulewidth}{0.3pt}
-\renewcommand{\footrulewidth}{0.0pt} 
+\renewcommand{\footrulewidth}{0.0pt}
 \lhead{}
 \chead{}
 \rhead{\footnotesize $title$ -- $date$}
@@ -77,7 +77,7 @@ $endif$
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
@@ -152,7 +152,7 @@ $endif$
 \makeatletter
 \@ifpackageloaded{biblatex}{}{\usepackage[style=authoryear-comp, backend=biber, natbib=true]{biblatex}}
 \makeatother
-\ExecuteBibliographyOptions{bibencoding=utf8,minnames=1,maxnames=3, maxbibnames=99,dashed=false,terseinits=true,giveninits=true,uniquename=false,uniquelist=false,doi=false, isbn=false,url=true,sortcites=false}
+\ExecuteBibliographyOptions{bibencoding=utf8,minnames=1,maxnames=3, maxbibnames=99,terseinits=true,giveninits=true,uniquename=false,uniquelist=false,doi=false, isbn=false,url=true,sortcites=false}
 
 \DeclareFieldFormat{url}{\texttt{\url{#1}}}
 \DeclareFieldFormat[article]{pages}{#1}
@@ -197,12 +197,12 @@ $endif$
 \date{$date$}
 
 
-\begin{document}  
+\begin{document}
 
 	$if(title)$
 	\maketitle
 	$endif$
-	
+
 	\thispagestyle{firststyle}
 %	\thispagestyle{empty}
 	\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
@@ -214,9 +214,9 @@ E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ & Web: $if(web)$\href{http:/
 	&  \\
 	\hline
 	\end{tabular*}
-	
+
 \vspace{2mm}
-	
+
 
 
 $body$
