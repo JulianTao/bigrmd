@@ -12,7 +12,7 @@ classhours: "TR <++>"
 # bibliography: teaching.bib
 output:
     bigrmd::syllabus:
-      keep_tex: true
+      keep_tex: yes
       fig_caption: yes
       latex_engine: pdflatex
 ---
