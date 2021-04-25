@@ -14,7 +14,7 @@ pubtype: Journal
 # bibliography: <++>.bib
 output:
   bigrmd::asce:
-    keep_tex:true
+    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
