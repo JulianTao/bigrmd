@@ -10,7 +10,7 @@ themeoptions: numbering=fraction, progressbar=frametitle
 titlegraphic: beamerlogo
 endlogo: Acknowledge-logo
 output: 
-  binb::metropolis:
+  bigrmd::slides:
     includes:
         in_header: preamble.tex 
 fontsize: 12pt
