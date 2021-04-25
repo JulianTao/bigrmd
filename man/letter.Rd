@@ -22,64 +22,10 @@ asce(...)
 
 syllabus(...)
 
-slides(
-  toc = FALSE,
-  slide_level = 2,
-  incremental = FALSE,
-  fig_width = 10,
-  fig_height = 7,
-  fig_crop = TRUE,
-  fig_caption = TRUE,
-  dev = "pdf",
-  df_print = "default",
-  fonttheme = "default",
-  highlight = "tango",
-  keep_tex = FALSE,
-  latex_engine = "xelatex",
-  citation_package = c("none", "natbib", "biblatex"),
-  includes = NULL,
-  md_extensions = NULL,
-  pandoc_args = NULL
-)
+slides(...)
 }
 \arguments{
 \item{\dots}{Arguments passed to \code{\link[bookdown]{pdf_document2}}.}
-
-\item{toc}{A logical variable defaulting to \code{FALSE}.}
-
-\item{slide_level}{A numeric variable defaulting to two for
-\sQuote{Metropolis} and \sQuote{Monash}, and three for \sQuote{IQSS}.}
-
-\item{incremental}{A logical variable defaulting to \code{FALSE}.}
-
-\item{fig_width}{A numeric variable defaulting to ten.}
-
-\item{fig_height}{A numeric variable defaulting to seven.}
-
-\item{fig_crop}{A logical variable defaulting to \code{TRUE}.}
-
-\item{fig_caption}{A logical variable defaulting to \code{TRUE}.}
-
-\item{dev}{A character variable defaulting to \dQuote{pdf}.}
-
-\item{df_print}{A character variable defaulting to \dQuote{default}.}
-
-\item{fonttheme}{A character variable defaulting to \dQuote{default}.}
-
-\item{highlight}{A character variable defaulting to \dQuote{tango}.}
-
-\item{keep_tex}{A logical variable defaulting to \code{FALSE}.}
-
-\item{latex_engine}{A character variable defaulting to \dQuote{xelatex}.}
-
-\item{citation_package}{An optional character variable with possible value
-\dQuote{none}, \dQuote{natbib} (the default), or \dQuote{biblatex}.}
-
-\item{includes}{An optional character variable defaulting to \code{NULL}.}
-
-\item{md_extensions}{An optional character variable defaulting to \code{NULL}.}
-
-\item{pandoc_args}{An optional character variable defaulting to \code{NULL}.}
 }
 \value{
 An R Markdown output format object.
