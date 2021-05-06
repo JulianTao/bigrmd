@@ -27,7 +27,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache=TRUE, messages=FALSE, warning=FALSE)
-# Make sure you have the latest versions of rmarkdown and bookdown installed
 library(ggplot2)
 ```
 *Brief Summary: <++>*
