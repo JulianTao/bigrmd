@@ -35,10 +35,12 @@ library(ggplot2)
 # Progress in this week
 <++>
 
+
 # Plan for the next week
 <++>
 
-# Upadte your semester plan
+
+# Update your semester plan
 *You can include your semester plan here and keep updating it every week*
 <++>
 

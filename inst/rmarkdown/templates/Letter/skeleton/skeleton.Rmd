@@ -10,7 +10,7 @@ logo: asulogo
 toname: <++>
 toaddress: <++>
 opening: Dear <++>
-closing: Best wishes
+closing: Best wishes,
 spacing: 1.4
 output:
   bigrmd::letter:

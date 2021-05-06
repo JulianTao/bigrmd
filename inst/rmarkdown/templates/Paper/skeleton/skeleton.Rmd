@@ -39,14 +39,18 @@ knitr::opts_chunk$set(echo = FALSE, cache=TRUE, messages=FALSE, warning=FALSE)
 library(ggplot2)
 ```
 
-
 # Introduction
+<++>
 
 # Method and Materials
+<++>
 
 # Results
+<++>
 
 # Discussion
+<++>
 
 # Conclusions
+<++>
 
