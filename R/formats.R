@@ -13,19 +13,21 @@
 #' @export
 letter <- function(...) {
   template <- system.file("rmarkdown/templates/Letter/resources/bigletter.tex",
-                          package="bigrmd")
-   bookdown::pdf_document2(...,
-                          template = template
-   )
+    package = "bigrmd"
+  )
+  bookdown::pdf_document2(...,
+    template = template
+  )
 }
 
 #' @rdname letter
 #' @export
 exam <- function(...) {
   template <- system.file("rmarkdown/templates/Exam/resources/bigexam.tex",
-                          package="bigrmd")
+    package = "bigrmd"
+  )
   bookdown::pdf_document2(...,
-                          template = template
+    template = template
   )
 }
 
@@ -33,9 +35,10 @@ exam <- function(...) {
 #' @export
 paper <- function(...) {
   template <- system.file("rmarkdown/templates/Paper/resources/bigpaper.tex",
-                          package="bigrmd")
+    package = "bigrmd"
+  )
   bookdown::pdf_document2(...,
-                          template = template
+    template = template
   )
 }
 
@@ -44,9 +47,10 @@ paper <- function(...) {
 #' @export
 report <- function(...) {
   template <- system.file("rmarkdown/templates/Report/resources/bigreport.tex",
-                          package="bigrmd")
+    package = "bigrmd"
+  )
   bookdown::pdf_document2(...,
-                          template = template
+    template = template
   )
 }
 
@@ -54,9 +58,10 @@ report <- function(...) {
 #' @export
 asce <- function(...) {
   template <- system.file("rmarkdown/templates/ASCE/resources/ascetmplt.tex",
-                          package="bigrmd")
+    package = "bigrmd"
+  )
   bookdown::pdf_document2(...,
-                          template = template
+    template = template
   )
 }
 
@@ -64,10 +69,11 @@ asce <- function(...) {
 #' @export
 syllabus <- function(...) {
   template <- system.file("rmarkdown/templates/Syllabus/resources/bigsyllabus.tex",
-                          package="bigrmd")
+    package = "bigrmd"
+  )
   bookdown::pdf_document2(...,
-                          citation_package = 'biblatex',
-                          template = template
+    citation_package = "biblatex",
+    template = template
   )
 }
 
