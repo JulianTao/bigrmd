@@ -1,10 +1,12 @@
-\documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
-\usepackage[$if(geometry)$$geometry$$else$margin=1in$endif$]{geometry}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
+\usepackage[$geometry$,margin=1in]{geometry}
 \newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
 $if(fontfamily)$
-\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+\usepackage[$fontfamilyoptions$]{$fontfamily$}
 $else$
-\usepackage{bera}
+\usepackage{fontspec}
+\renewcommand\familydefault{\sfdefault} 
+\setmainfont{Arial}
 $endif$
 \usepackage{abstract}
 \renewcommand{\abstractname}{}    % clear the title
@@ -12,24 +14,22 @@ $endif$
 \newcommand{\blankline}{\quad\pagebreak[2]}
 
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} 
 \usepackage{longtable,booktabs}
 
 \usepackage{parskip}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+
+\titleformat*{\subsubsection}{\normalsize\itshape}
+
 \usepackage{titling}
 \setlength{\droptitle}{-.25cm}
 
-%% SECTION TITLES
-\RequirePackage[compact,sf,bf]{titlesec}
-\titleformat*{\section}{\Large\sf\bfseries\color[rgb]{0.55, 0.11, 0.25}}
-\titleformat*{\subsection}{\large\bfseries}
-\titleformat*{\subsubsection}{\bfseries}
-\titlespacing{\section}{0pt}{2ex}{.5ex}
-\titlespacing{\subsection}{0pt}{1.5ex}{0ex}
-\titlespacing{\subsubsection}{0pt}{.5ex}{0ex}
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{6pt plus 2pt minus 1pt}
-%\setlength{\emergencystretch}{3em}  % prevent overfull lines
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines 
 
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -38,7 +38,7 @@ $endif$
 \pagestyle{fancy}
 \usepackage{lastpage}
 \renewcommand{\headrulewidth}{0.3pt}
-\renewcommand{\footrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt} 
 \lhead{}
 \chead{}
 \rhead{\footnotesize $title$ -- $date$}
@@ -52,11 +52,6 @@ $endif$
    \fancyhf{}
    \fancyfoot[C]{\small \thepage/\pageref*{LastPage}}
 }
-
-%\def\labelitemi{--}
-%\usepackage{enumitem}
-%\setitemize[0]{leftmargin=25pt}
-%\setenumerate[0]{leftmargin=25pt}
 
 \makeatletter
 \@ifpackageloaded{hyperref}{}{%
@@ -77,7 +72,7 @@ $endif$
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
@@ -85,7 +80,6 @@ $endif$
             linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
-
 
 \setcounter{secnumdepth}{0}
 
@@ -124,60 +118,12 @@ $if(natbib)$
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
-\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+\usepackage$if(biblio-style)$[style=$biblio-style$]$endif${biblatex}
+$if(biblatexoptions)$\ExecuteBibliographyOptions{$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$}$endif$
 $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
 $endif$
-
-%% HYPERLINKS
-\RequirePackage{xcolor} % Needed for links
-\definecolor{darkblue}{rgb}{0,0,.6}
-\RequirePackage{url}
-
-\makeatletter
-\@ifpackageloaded{hyperref}{}{\RequirePackage{hyperref}}
-\makeatother
-\hypersetup{
-     citecolor=0 0 0,
-     breaklinks=true,
-     bookmarksopen=true,
-     bookmarksnumbered=true,
-     linkcolor=darkblue,
-     urlcolor=blue,
-     citecolor=darkblue,
-     colorlinks=true}
-%% BIBLIOGRAPHY
-
-\makeatletter
-\@ifpackageloaded{biblatex}{}{\usepackage[style=authoryear-comp, backend=biber, natbib=true]{biblatex}}
-\makeatother
-\ExecuteBibliographyOptions{bibencoding=utf8,minnames=1,maxnames=3, maxbibnames=99,terseinits=true,giveninits=true,uniquename=false,uniquelist=false,doi=false, isbn=false,url=true,sortcites=false}
-
-\DeclareFieldFormat{url}{\texttt{\url{#1}}}
-\DeclareFieldFormat[article]{pages}{#1}
-\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[incollection]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
-\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
-\DeclareFieldFormat[article]{title}{\MakeCapital{#1}}
-\DeclareFieldFormat[inproceedings]{title}{#1}
-\DeclareFieldFormat{shorthandwidth}{#1}
-% No dot before number of articles
-\usepackage{xpatch}
-\xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
-% Remove In: for an article.
-\renewbibmacro{in:}{%
-  \ifentrytype{article}{}{%
-  \printtext{\bibstring{in}\intitlepunct}}}
-
-\makeatletter
-\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
-\makeatother
-\renewcommand*{\finalnamedelim}{%
-  %\ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}% there really should be no funny Oxford comma business here
-  \addspace\&\space}
-
 $if(listings)$
 \usepackage{listings}
 $endif$
@@ -192,7 +138,7 @@ $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 $if(author)$
-\author{Instructor: $for(author)$$author$$sep$ \and $endfor$}
+\author{$for(author)$$author$$sep$ \and $endfor$}
 $endif$
 \date{$date$}
 
@@ -203,10 +149,13 @@ $if(title)$
 \maketitle
 $endif$
 
-\thispagestyle{firststyle}
-%	\thispagestyle{empty}
-\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
 
+\thispagestyle{firststyle}
+
+%	\thispagestyle{empty}
+
+
+\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
 
 	Class Hours: $if(classhours)$$classhours$$else$TBD$endif$ &  Office Hours: $if(officehours)$$officehours$$else$TBD$endif$ \\
 	Class Room: $if(classroom)$$classroom$$else$TBD$endif$ & Office: $if(office)$$office$$else$TBD$endif$ \\
@@ -220,6 +169,8 @@ $endif$
 
 
 $body$
+
+
 
 $if(natbib)$
 $if(bibliography)$
@@ -238,6 +189,8 @@ $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
 
+
+
 $endif$
 $for(include-after)$
 $include-after$
@@ -248,7 +201,11 @@ $endfor$
 \makeatletter
 \def\@maketitle{%
 	\newpage
+	%  \null
+	%  \vskip 2em%
+	%  \begin{center}%
 	\let \footnote \thanks
 	{\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
 }
+%\fi
 \makeatother

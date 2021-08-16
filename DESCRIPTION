@@ -1,7 +1,7 @@
 Package: bigrmd
 Type: Package
 Title: Promote Reproducible Writing with Consistent Styles in the Research Group
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Julian", "Tao", , "julian.tao@asu.edu", c("aut", "cre"))
 Maintainer: <julian.tao@asu.edu>
 Description: This package includes typical document templates for weekly reports, working papers, ASCE manuscripts, recommendation letters, presentation slides, syllabus, homework and exam papers. The package was heavily inspired by Yihui Xie and Prof. Rob Hyndman.
