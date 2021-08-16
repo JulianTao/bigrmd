@@ -72,7 +72,6 @@ syllabus <- function(...) {
     package = "bigrmd"
   )
   bookdown::pdf_document2(...,
-    citation_package = "biblatex",
     template = template
   )
 }

@@ -22,8 +22,8 @@ $endif$
 %% SECTION TITLES
 \RequirePackage[compact,sf,bf]{titlesec}
 \titleformat*{\section}{\Large\sf\bfseries\color[rgb]{0.55, 0.11, 0.25}}
-\titleformat*{\subsection}{\large\sf\bfseries\color[rgb]{0.55, 0.11, 0.25}}
-\titleformat*{\subsubsection}{\sf\bfseries\color[rgb]{0.55, 0.11, 0.25}}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
 \titlespacing{\section}{0pt}{2ex}{.5ex}
 \titlespacing{\subsection}{0pt}{1.5ex}{0ex}
 \titlespacing{\subsubsection}{0pt}{.5ex}{0ex}
@@ -199,21 +199,21 @@ $endif$
 
 \begin{document}
 
-	$if(title)$
-	\maketitle
-	$endif$
+$if(title)$
+\maketitle
+$endif$
 
-	\thispagestyle{firststyle}
+\thispagestyle{firststyle}
 %	\thispagestyle{empty}
-	\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
+\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
 
 
-Class Hours: $if(classhours)$$classhours$$else$TBD$endif$ &  Office Hours: $if(officehours)$$officehours$$else$TBD$endif$ \\
-Class Room: $if(classroom)$$classroom$$else$TBD$endif$ & Office: $if(office)$$office$$else$TBD$endif$ \\
-E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ & Web: $if(web)$\href{http://$web$}{\tt $web$}$else$TBD$endif$\\
+	Class Hours: $if(classhours)$$classhours$$else$TBD$endif$ &  Office Hours: $if(officehours)$$officehours$$else$TBD$endif$ \\
+	Class Room: $if(classroom)$$classroom$$else$TBD$endif$ & Office: $if(office)$$office$$else$TBD$endif$ \\
+	E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ & Web: $if(web)$\href{http://$web$}{\tt $web$}$else$TBD$endif$\\
 	&  \\
 	\hline
-	\end{tabular*}
+\end{tabular*}
 
 \vspace{2mm}
 
@@ -247,8 +247,8 @@ $endfor$
 
 \makeatletter
 \def\@maketitle{%
-  \newpage
-  \let \footnote \thanks
-    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+	\newpage
+	\let \footnote \thanks
+	{\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
 }
 \makeatother
