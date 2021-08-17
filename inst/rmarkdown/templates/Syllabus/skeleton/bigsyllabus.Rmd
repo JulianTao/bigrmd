@@ -1,7 +1,7 @@
 ---
 title: "<++> Syllabus"
 author: Julian Tao
-date: "Fall 2021"
+date: "<++>"
 
 email: "julian.tao@asu.edu"
 web: "sites.google.com/asu.edu/big"
@@ -9,37 +9,35 @@ officehours: "W <++>"
 office: "126 Goldwater Center"
 classroom: "<++>"
 classhours: "TR <++>"
-# bibliography: teaching.bib
-output:
-    bigrmd::syllabus:
-      keep_tex: yes
-      fig_caption: yes
-      latex_engine: pdflatex
+output: 
+  bigrmd::syllabus:
+    latex_engine: xelatex
 ---
-```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
-knitr::opts_chunk$set(cache=TRUE)
-knitr::opts_chunk$set(fig.path='figs/')
-knitr::opts_chunk$set(cache.path='_cache/')
-knitr::opts_chunk$set(warning=F, message=F)
-# knitr::opts_knit$get(kable.force.latex = TRUE)
-```
 
-```{r dates, include=FALSE}
-knitr::opts_chunk$set(cache=FALSE, dev='pdf')
-mon <- as.Date("2021-08-19")
-advdate <- function(obj, adv) {
- tmon <- obj + 7*(adv-1)
- tfri <- obj + 4 + 7*(adv-1)
- tmon <- format(tmon, format="%m/%d")
- tfri <- format(tfri, format="%m/%d")
- zadv <- sprintf("%02d", adv)
- tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
- return(tmp)
-}
+```{r ref, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, dev = "pdf")
+library(RefManageR)
+bib <- ReadBib("CEE550.bib")
+myopts <- BibOptions(
+  bib.style = "authoryear",
+  style = "latex",
+  first.inits = FALSE,
+  max.names = 20
+)
 ```
 
 # Course Description
 
+
+# Enrollment Requirements
+
+# Communication and Electronic Resources
+
+* Communication with email is highly recommended. 
+  - Include "<++>" in your email subject line when sending an email.
+  - Expect to receive feedback within 24 hours.
+* Information such as notes and reference materials will be updated through CANVAS;
+* the instructor will also contact the students using ASU email addresses unless the student provides an alternative email address.
 
 # Course Objectives
 
@@ -47,14 +45,49 @@ advdate <- function(obj, adv) {
 
 # Textbook and References
 
+```{r, echo = FALSE, results="asis"} 
+bib["<++>", "<++>"]
+``` 
 
 # Grade Policies
 
-# Absence Make-up Polices
+The students will be evaluated with homework, quizzes, term paper and exams. 
+
+Weights of assignments:
+
+|    |     |
+|--------------- | --------------- |
+| Homework and Quiz   | 20%   |
+| Term Paper and Presentation    | 30%   |
+| Mid Exam   | 20%   |
+| Final Exam   | 30%   |
+
+The grading will follow the ASU letter scheme:
+
+ 
+|    |     |
+|--- | ---------- |
+|A+	|100%	--	97% |
+|A	|97%	--	94% |
+|A-	|94%	--	90% |
+|B+	|90%	--	87% |
+|B	|87%	--	84% |
+|B-	|84%	--	80% |
+|C+	|80%	--	76% |
+|C	|76%	--	70% |
+|D	|70%	--	60% |
+|E	|60%	--	0%  |
+
+
+# Absence and Make-up Polices
+
 ## General policy
+According to Arizona State University attendance policy, a student is expected to attend all classes for which the student is enrolled.
 
 ## Excused absences
+
 1. Excused absences related to religious observances/practices that are in accord with [ACD 304-04](https://www.asu.edu/aad/manuals/acd/acd304-04.html)
+
 2. Excused absences related to university sanctioned events/activities that are in accord with [ACD 304-02](https://www.asu.edu/aad/manuals/acd/acd304-02.html)
 
 ## Make-up policy
@@ -62,6 +95,40 @@ There will be no make-up tests.
 
 # Homework, Exams and Quizes
 
+1. **Homework** will be handed out on select <++> and is typically due the following <++>.
+**Quizzes** are in the form of multiple-choices or blank filling questions. Quizzes will be held in class and early notices will be given a week in advance.
+
+2. **Term paper and presentations** are required for term projects. Potential topics for the term project are related to the **course work and/or the students’ research**. The students are free to choose any topics related to the course coverage and objectives. For each project/report, students are requested to do a 15 minutes presentation.
+
+**Requirements**:
+
+* Make an appointment with the instructor during the month of **<++>** to discuss the topic of your interest.
+* An abstract is required and should be submitted before **<++> 30**.
+* The final paper must be related to the course. It can be about a topic covered in class or another related research topic.
+* The following information should be clearly outlined and presented:
+    - Abstract
+    - Introduction – Importance of the information presented, objectives
+    - Background - Literature review necessary to make your point
+    - Data collected from either databases available or lab tests performed **OR**
+    - Development of the topic, if the paper is a state-of-the art or state-of-the practice paper
+    - Results if available
+    - Analysis and your conclusions (Most important)
+    - Recommendations to further the knowledge of the topic
+    - References
+* A minimum of 5 references should be used. They can be journal papers, books and standards.
+* Length: 5 pages if single-spaced. 8 pages if 1.5 spaced. Not more, nor less.
+* Format: JGGE from ASCE – Requirements are posted on the [ASCE website](https://ascelibrary.org/doi/abs/10.1061/9780784479018). The use of reference management software such as Zotero or Mendeley is highly recommended.  
+* Final paper is due **<++>**. 
+
+3. Exams include multiple-choice problems, explanatory essay questions and calculation problems. They are usually open-book.
+
+4. Late submissions are **not** accepted unless an extension is granted by the instructor **before** the due date.
+
+## Writing Aid
+
+ASU Writing Centers offer a dynamic, supportive learning environment for graduate students who are currently enrolled in 500, 600, or 700 level courses.
+
+To learn more or schedule an appointment, visit [Graduate Writing Tutoring website](https://tutoring.asu.edu/content/graduate-writing-tutoring).
 # Classroom Behavior
 
 # Academic Integrity
@@ -89,22 +156,76 @@ As an employee of the University I am considered a mandated reporter and therefo
 [ASU Counseling Services](https://eoss.asu.edu/counseling), is available if you wish to discuss any concerns confidentially and privately.
 
 # Tentative Schedule
-Students must read the following before Tuesday's class session.  Important: class readings are subject to change, contingent on mitigating circumstances and the progress we make as a class.  Students are encouraged to attend lectures and check the course Canvas website for updates.
 
-##  `r advdate(mon, 1)`: Syllabus Day
-##  `r advdate(mon, 2)`:
-##  `r advdate(mon, 3)`:
-##  `r advdate(mon, 4)`:
-##  `r advdate(mon, 5)`:
-##  `r advdate(mon, 6)`:
-##  `r advdate(mon, 7)`:
-##  `r advdate(mon, 8)`:
-##  `r advdate(mon, 9)`:
-##  `r advdate(mon, 10)`:
-##  `r advdate(mon, 11)`:
-##  `r advdate(mon, 12)`:
-##  `r advdate(mon, 13)`:
-##  `r advdate(mon, 14)`:
-##  `r advdate(mon, 15)`:
-##  `r advdate(mon, 16)`:
-##  `r advdate(mon, 17)`:
+Note that the schedule is subject to change, contingent on mitigating circumstances and the progress we make as a class. Students are encouraged to check the course Canvas website for updates.
+
+```{r schedule, echo = FALSE}
+library(tidyverse)
+library(kableExtra)
+
+mon <- as.Date("2021-08-16")
+adv2 <- function(obj, adv) {
+  t2 <- obj + 1 + 7 * (adv - 1)
+  t2 <- format(t2, format = "%m/%d")
+  t2 <- paste("Tue, ", t2)
+  return(t2)
+}
+
+adv4 <- function(obj, adv) {
+  t4 <- obj + 3 + 7 * (adv - 1)
+  t4 <- format(t4, format = "%m/%d")
+  t4 <- paste("Thu, ", t4)
+  return(t4)
+}
+tuesdays <- tibble(
+  x = 1:16,
+  Week = paste("Week ", sprintf("%02d", x)),
+  Day = adv2(mon, x),
+)
+thursdays <- tibble(
+  x = 1:16,
+  Week = paste("Week ", sprintf("%02d", x)),
+  Day = adv4(mon, x)
+)
+dates <- bind_rows(tuesdays, thursdays) %>% arrange(Week)
+coverage <- tribble(
+  ~Coverage, ~Assignments,
+  "Syllabus and Introduction", "Review Syllabus;\nRead Ch. 1, 2.1 - 2.5",
+  "Soil Formation I", "Read Ch. 2.2 - 2.10",
+  "Soil Formation II", "HW 1\nRead Ch. 3.1 - 3.12",
+  "Soil Mineralogy I", "Read Ch. 3.13 - 3.25",
+  "Soil Mineralogy II", "HW 2\nRead Ch. 4.1 - 4.6",
+  "Soil Composition I", "Read Ch. 4.7 - 4.10",
+  "Soil Composition II", "HW 3\nRead Ch. 6.1 - 6.10",
+  "Soil-water-chemecial Interactions I", "Read Ch. 6.11 - 6.18",
+  "Soil-water-chemecial Interactions II", "HW 4\nRead Ch. 5.1 - 5.6",
+  "Soil Fabric I", "Read Ch. 5.7 - 5.11",
+  "Soil Fabric II", "Read Ch. 8",
+  "Fabric-Structure-Property I", "Read shared paper",
+  "Fabric-Structure-Property II", "Read Ch. 7",
+  "Effective, Intergranular and Total Stress", "HW 5\nReview",
+  "Mid-term Exam", "",
+  "Conduction Phenomena I", "Read Ch.9",
+  "Fall break", "",
+  "CBBG annual meeting", "Read Ch.9",
+  "Conduction Phenomena II", "HW 6\nRead Ch. 10.1 - 10.7",
+  "Volume Change I", "Read Ch. 10.8 - 10.13",
+  "Volume Change II", "HW 7\nRead shared papers",
+  "CSSM I", "Review notes",
+  "CSSM II", "Review notes",
+  "CSSM III", "HW 7\nRead Ch. 11.1 - 11.11",
+  "Strength and Deformation I", "Read Ch. 11.12 - 11.22",
+  "Veteran Day observed", "",
+  "Strength and Deformation II", "HW 8\nRead Ch. 12.1 - 12.6",
+  "Time Effects I", "Read Ch. 12.7 - 12.14",
+  "Time Effects II", "HW 9",
+  "Thanksgiving Holiday Observed", "Review",
+  "Biogeotechnics and Soil Behavior", "Review",
+  "Review", ""
+)
+schedule <- mutate(dates, coverage) %>% select(-x)
+
+schedule %>%
+  kbl("latex", booktabs = T, escape = FALSE)
+```
+
