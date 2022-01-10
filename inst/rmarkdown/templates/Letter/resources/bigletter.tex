@@ -2,7 +2,7 @@
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
-\usepackage{bera}
+\usepackage{carlito}
 $endif$
 $if(linestretch)$
 \usepackage{setspace}
@@ -186,7 +186,7 @@ $endif$
 \newlength{\junkw}
 
 \makeatletter
-\def\ps@monash{\begin{textblock}{8}(2,1.5)
+\def\ps@asu{\begin{textblock}{8}(2,1.5)
 \usebox{\lethdone}
 \end{textblock}
 \begin{textblock}{6}(15,1.5)
@@ -195,7 +195,7 @@ $endif$
 \begin{textblock}{10}(2,25.5)\usebox{\lethdtwo}\end{textblock}\def\thepage{}}
 
 \@ifundefined{opening}{}{%
-\renewcommand*{\opening}[1]{\thispagestyle{monash}%
+\renewcommand*{\opening}[1]{\thispagestyle{asu}%
    {\@date\par}%
   \vspace{2\parskip}%
   {\raggedright \toname \\ \toaddress \par}%
@@ -251,12 +251,12 @@ $for(include-before)$
 $include-before$
 $endfor$
 \begin{letter}{$toname$\\$toaddress$}
-\setstretch{1}
-\vspace*{2cm}
-\opening{$opening$}
-\setstretch{$spacing$}
-$body$
-\closing{$closing$\\[0.2cm]\hspace*{0.5cm}\includegraphics[height=1cm]{$fromsignature$}}
+		\setstretch{1}
+		\vspace*{2cm}
+		\opening{$opening$}
+		\setstretch{$spacing$}
+	$body$
+	\closing{$closing$\\[0.2cm]\hspace*{0.5cm}\includegraphics[height=1cm]{$fromsignature$}}
 \end{letter}
 
 
