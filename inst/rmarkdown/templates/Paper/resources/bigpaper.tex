@@ -215,8 +215,6 @@ $if(institute)$
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}
 $endif$
 
-%% MONASH STUFF
-
 %% CAPTIONS
 \RequirePackage{caption}
 \DeclareCaptionStyle{italic}[justification=centering]
@@ -455,12 +453,12 @@ $if(title)$
 $endif$
 $if(abstract)$
 \begin{abstract}
-$abstract$
+	$abstract$
 \end{abstract}
 $endif$
 $if(keywords)$
 \begin{keywords}
-$keywords$
+	$keywords$
 \end{keywords}
 $endif$
 
@@ -470,13 +468,13 @@ $include-before$
 $endfor$
 $if(toc)$
 {
-\newpage
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-$endif$
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
+		\newpage
+		$if(colorlinks)$
+		\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+		$endif$
+		\setcounter{tocdepth}{$toc-depth$}
+		\tableofcontents
+	}
 $endif$
 $if(lot)$
 \newpage

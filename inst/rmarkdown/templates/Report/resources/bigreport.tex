@@ -212,8 +212,6 @@ $if(institute)$
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}
 $endif$
 
-%% MONASH STUFF
-
 %% CAPTIONS
 \RequirePackage{caption}
 \DeclareCaptionStyle{italic}[justification=centering]
@@ -488,12 +486,12 @@ $include-before$
 $endfor$
 $if(toc)$
 {
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-$endif$
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
+		$if(colorlinks)$
+		\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+		$endif$
+		\setcounter{tocdepth}{$toc-depth$}
+		\tableofcontents
+	}
 $endif$
 $if(lot)$
 \listoftables
