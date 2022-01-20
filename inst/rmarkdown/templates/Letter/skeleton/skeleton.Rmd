@@ -2,7 +2,7 @@
 from: Julian Tao
 fromqualifications: PhD
 fromtitle: Associate Professor
-fromWWW: sites.google.com/asu.edu/big
+fromWWW: juliantao.github.io/big
 fromemail: julian.tao@asu.edu
 fromphone: (216) 785 1376
 fromsignature: Signature
